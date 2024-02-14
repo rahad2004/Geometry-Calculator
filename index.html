@@ -11,7 +11,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class=" lg:w-[80%] md:w-[90%] w-full p-10 mx-auto my-9">
+  <body class="lg:w-[80%] md:w-[90%] w-full p-10 mx-auto my-9">
     <section class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
       <!-- traingal -->
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
@@ -34,13 +34,11 @@
               class="p-3 w-[35%] rounded-md"
             />
             <span class="text-xl">cm</span>
-            
           </div>
           <div>
             <span>Area : </span>
             <span id="t-output"> 0</span>
             <span> cm <sup>2</sup></span>
-  
           </div>
           <div class="card-actions justify-end">
             <button
@@ -53,91 +51,182 @@
         </div>
       </div>
       <!-- end -->
-      <!-- traingal -->
+      <!-- rectangle -->
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img
-            src="images/rectangle.png"
-            alt="rectangle"
-          />
+          <img src="images/rectangle.png" alt="rectangle" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Rectangle</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <p>Area (A) = w x l</p>
+          <div class="flex gap-3">
+            <input
+              type="text"
+              id="rectangle-w"
+              placeholder="w"
+              class="p-3 w-[35%] rounded-md "
+            />
+            <span class="text-xl">cm</span>
+            <input
+              type="text"
+              id="rectangle-l"
+              placeholder="l"
+              class="p-3 w-[35%] rounded-md"
+            />
+            <span class="text-xl">cm</span>
+          </div>
+          <div>
+            <span>Area : </span>
+            <span id="r-output"> 0</span>
+            <span> cm <sup>2</sup></span>
+          </div>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary w-full">Buy Now</button>
+            <button onclick="calculationRectangle()" class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
       </div>
       <!-- end -->
-      <!-- traingal -->
+      <!-- rectangle -->
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src="images/parallelogram.png" alt="rectangle" />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 class="card-title">Parallelogram</h2>
+          <p>Area (A) = b x h</p>
+          <div class="flex gap-3">
+            <input
+              type="text"
+              id="parallelogram-b"
+              placeholder="b"
+              class="p-3 w-[35%] rounded-md "
+            />
+            <span class="text-xl">cm</span>
+            <input
+              type="text"
+              id="parallelogram-h"
+              placeholder="h"
+              class="p-3 w-[35%] rounded-md"
+            />
+            <span class="text-xl">cm</span>
+          </div>
+          <div>
+            <span>Area : </span>
+            <span id="p-output"> 0</span>
+            <span> cm <sup>2</sup></span>
+          </div>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+            <button onclick="calculationParallelogram()" class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
       </div>
       <!-- end -->
-      <!-- traingal -->
+      <!-- Rhombus -->
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src="images/rhombus.png" alt="rectangle" />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 class="card-title">Rhombus</h2>
+          <p>Area (A) = 0.5 x b1 x b2</p>
+          <div class="flex gap-3">
+            <input
+              type="text"
+              id="rhombus-b1"
+              placeholder="b1"
+              class="p-3 w-[35%] rounded-md "
+            />
+            <span class="text-xl">cm</span>
+            <input
+              type="text"
+              id="rhombus-b2"
+              placeholder="b2"
+              class="p-3 w-[35%] rounded-md"
+            />
+            <span class="text-xl">cm</span>
+          </div>
+          <div>
+            <span>Area : </span>
+            <span id="rh-output"> 0</span>
+            <span> cm <sup>2</sup></span>
+          </div>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+            <button onclick="calculationRhombus()" class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
       </div>
       <!-- end -->
-      <!-- traingal -->
+      <!-- pentagon -->
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src="images/pentagon.png" alt="pentagon" />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 class="card-title">Pentagon</h2>
+          <p>Area (A) = 0.5 x p x h</p>
+          <div class="flex gap-3">
+            <input
+              type="text"
+              id="pentagon-p"
+              placeholder="p"
+              class="p-3 w-[35%] rounded-md "
+            />
+            <span class="text-xl">cm</span>
+            <input
+              type="text"
+              id="pentagon-b"
+              placeholder="h"
+              class="p-3 w-[35%] rounded-md"
+            />
+            <span class="text-xl">cm</span>
+          </div>
+          <div>
+            <span>Area : </span>
+            <span id="pen-output"> 0</span>
+            <span> cm <sup>2</sup></span>
+          </div>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+            <button onclick="calculationPentagon()" class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
       </div>
       <!-- end -->
-      <!-- traingal -->
+      <!-- ellipse -->
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
-          <img
-            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
+          <img src="images/ellipse.png" alt="rectangle" />
         </figure>
         <div class="card-body">
-          <h2 class="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 class="card-title">Ellipse</h2>
+          <p>Area (A) =  πab</p>
+          <div class="flex gap-3">
+            <input
+              type="text"
+              id="ellipse-a"
+              placeholder="a"
+              class="p-3 w-[35%] rounded-md "
+            />
+            <span class="text-xl">cm</span>
+            <input
+              type="text"
+              id="ellipse-b"
+              placeholder="b"
+              class="p-3 w-[35%] rounded-md"
+            />
+            <span class="text-xl">cm</span>
+          </div>
+          <div>
+            <span>Area : </span>
+            <span id="ellipse-output"> 0</span>
+            <span> cm <sup>2</sup></span>
+          </div>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
+            <button onclick="calculationEllipse()" class="btn btn-primary w-full">Calculate</button>
           </div>
         </div>
       </div>
       <!-- end -->
+     
     </section>
     <script src="code/utilyty.js"></script>
     <script src="code/traingle.js"></script>
